@@ -24,8 +24,8 @@
 
 #define ABOUT_INDENT 4
 
-const char ABOUT_VERSION_1[] = "EdgeTX " CODENAME "(" VERSION ")";
-const char ABOUT_VERSION_2[] = "Copyright (C) 2021 EdgeTX";
+const char ABOUT_VERSION_1[] = "OlivierTX " CODENAME "(" VERSION ")";
+const char ABOUT_VERSION_2[] = "Copyright (C) 2022 EdgeTX";
 const char ABOUT_VERSION_3[] = "https://edgetx.org";
 
 void menuAboutView(event_t event)
