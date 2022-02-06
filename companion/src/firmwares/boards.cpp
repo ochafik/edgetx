@@ -814,7 +814,12 @@ QList<int> Boards::getSupportedInternalModules(Board::Type board)
 {
   QList<int> modules;
   modules = {(int)MODULE_TYPE_NONE};
-  if (IS_TARANIS_X9DP_2019(board) || IS_TARANIS_X7_ACCESS(board)) {
+  if (IS_JUMPER_TPRO(board) || IS_RADIOMASTER_ZORRO(board)) {
+    modules.append({
+        (int)MODULE_TYPE_CROSSFIRE,
+        (int)MODULE_TYPE_MULTIMODULE,
+    });
+  } else if (IS_TARANIS_X9DP_2019(board) || IS_TARANIS_X7_ACCESS(board)) {
     modules.append({(int)MODULE_TYPE_ISRM_PXX2});
   } else if (IS_FLYSKY_NV14(board)) {
     modules.append({(int)MODULE_TYPE_FLYSKY});
@@ -860,9 +865,10 @@ int Boards::getDefaultInternalModules(Board::Type board)
   case BOARD_RADIOMASTER_TX12:
   case BOARD_RADIOMASTER_T8:
   case BOARD_JUMPER_TLITE:
+    return (int)MODULE_TYPE_MULTIMODULE;
   case BOARD_RADIOMASTER_ZORRO:
   case BOARD_JUMPER_TPRO:
-    return (int)MODULE_TYPE_MULTIMODULE;
+    return (int)MODULE_TYPE_CROSSFIRE;
 
   case BOARD_FLYSKY_NV14:
     return (int)MODULE_TYPE_FLYSKY;

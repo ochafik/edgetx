@@ -104,6 +104,13 @@ void setVendorSpecificModelDefaults(uint8_t id)
   g_model.moduleData[INTERNAL_MODULE].subType = MM_RF_FRSKY_SUBTYPE_D8;
   g_model.moduleData[INTERNAL_MODULE].failsafeMode = FAILSAFE_NOPULSES;
 #endif
+
+#if defined(RADIO_TPRO)
+  // Those settings are for headless radio
+  g_model.moduleData[INTERNAL_MODULE].type = MODULE_TYPE_CROSSFIRE;
+#endif
+
+
 }
 
 void applyDefaultTemplate()
