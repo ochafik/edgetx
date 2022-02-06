@@ -228,7 +228,7 @@ options_jumper_tpro = {
     "nooverridech": ("OVERRIDE_CHANNEL_FUNCTION", "NO", "YES"),
     "flexr9m": ("MODULE_PROTOCOL_FLEX", None, "YES"),
     "internalmulti": ("INTERNAL_MODULE_MULTI", "NO", "YES"),
-    "internalelrs": ("INTERNAL_MODULE_ELRS", "YES", "NO"),
+    "internalcrsf": ("INTERNAL_MODULE_CRSF", "YES", "NO"),
 }
 
 options_jumper_t12 = {
